@@ -41,7 +41,14 @@ topic "Updating apt caches"
 apt-get $APT_OPTIONS update | indent
 
 topic "Fetching .debs for xserver-xorg-core libgl1-mesa-dri xvfb libglide3 xfs unzip"
-apt-get $APT_OPTIONS -y -d install xserver-xorg-core libgl1-mesa-dri xvfb libglide3 xfs unzip | indent
+apt-get $APT_OPTIONS -y -d install  \
+  openjdk-6-jre-headless \
+  unzip \
+  xfonts-100dpi \
+  xfonts-75dpi \
+  xfonts-cyrillic \
+  xfonts-scalable \
+  xvfb | indent
 
 topic "Fetching google chrome"
 CHROME_URL="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"

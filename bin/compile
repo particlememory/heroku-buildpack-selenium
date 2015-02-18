@@ -49,6 +49,7 @@ apt-get $APT_OPTIONS -y -d install  \
   xfonts-cyrillic \
   xfonts-scalable \
   x11-apps \
+  libxfont1 \
   xvfb | indent
 
 topic "Fetching google chrome"
